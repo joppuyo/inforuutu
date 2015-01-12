@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="128px" height="128px" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>retweet-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="retweet-icon" sketch:type="MSArtboardGroup">
+            <rect id="Rectangle-1" fill="#77B255" sketch:type="MSShapeGroup" x="2" y="2" width="123" height="123" rx="12"></rect>
+            <path d="M103.9,74.1 L103.9,44 C103.9,38.477 99.423,34 93.9,34 L49,34 L61.804,48 L89.099,48 L89.099,74.1 L79,74.1 L96.5,94 L114,74.1 L103.9,74.1 Z M38.9,80 L38.9,53.901 L49,53.901 L31.5,34 L14,53.901 L24.1,53.901 L24.1,84 C24.1,89.524 28.576,94 34.1,94 L79,94 L66.195,80 L38.9,80 Z" id="Fill-297" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

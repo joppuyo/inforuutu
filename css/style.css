@@ -1,0 +1,285 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html {
+    height: 720px;
+    width: 1280px;
+    background-color: black;
+    cursor: none;
+}
+
+/* Improves Raspberry Pi performance */
+img {
+    image-rendering: -moz-crisp-edges;
+}
+
+body {
+    height: 100%;
+    background-color: #4a90e2;
+    /* font-family: "proxima-nova-soft", sans-serif; */
+    font-family: "Helvetica Neue", "Arial", sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    height: 100%;
+    padding-top: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
+    overflow: hidden;
+}
+
+.tweet {
+    height: 50%;
+    padding-bottom: 32px;
+    width: 100%;
+    display: table;
+}
+
+.tweet-large {
+    height: 100%;
+    padding-bottom: 32px;
+    width: 100%;
+    display: table;
+}
+
+.tweet-profile-image {
+    display: table-cell;
+    vertical-align: top;
+    height: 50%;
+    position: relative;
+}
+
+.tweet-profile-image img {
+    width: 160px;
+}
+
+.tweet-text {
+    font-size: 45px;
+    background-color: white;
+    height: 100%;
+    display: table-cell;
+    vertical-align: top;
+    width: 100%;
+    padding: 32px;
+    position: relative;
+}
+
+.tweet-text-bolder {
+    font-weight: 500;
+}
+
+.tweet-large .tweet-text {
+    font-size: 32px;
+}
+
+.tweet-profile-image:before{
+    display: block;
+    content: "";
+    width: 56px;
+    height: 56px;
+    background-image: url("../images/bubble-tip.svg");
+    position: absolute;
+    right: 0;
+}
+
+.tweet-screen-name {
+    position: absolute;
+    bottom: 32px;
+    font-weight: 500;
+}
+
+.tweet-created-at {
+    position: absolute;
+    right: 32px;
+    bottom: 32px;
+    opacity: 0.5;
+}
+
+.tweet-media {
+    width: 100%;
+    height: 75%;
+    /*background-size: cover;*/
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 16px;
+    background-color: black;
+}
+
+.translate {
+    height: 100%;
+
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    transform: translateY(0%);
+    -webkit-transition: 1s -webkit-transform;
+    -moz-transition: 1s -moz-transform;
+    transition: 1s transform;
+}
+
+.slide{
+    height: 100%;
+}
+
+.slide h1 {
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 32px;
+}
+
+.slide h2 {
+    text-align: center;
+    font-size: 52px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.slide-text {
+    font-size: 45px;
+    padding-bottom: 32px;
+    line-height: 1.25;
+}
+
+.slide-text p + p {
+    padding-top:25px;
+}
+
+.slide-text b, .slide-text strong {
+    font-weight: bold;
+}
+
+.slide-text i, .slide-text em {
+    font-style: oblique;
+}
+
+
+.slide-text li ul, .slide-text li ol {
+    margin:0 1.5em;
+}
+.slide-text ul, .slide-text ol {
+    margin:0 1.5em 1.5em 1.5em;
+}
+.slide-text ul {
+    list-style-type:disc;
+}
+.slide-text ol {
+    list-style-type:decimal;
+}
+
+.slide-text del {
+    text-decoration: line-through;
+}
+
+.slide-text img {
+    display: block;
+    margin: 0 auto;
+}
+
+.slide-content {
+    background-color: white;
+    height: 100%;
+    padding: 32px;
+}
+
+.emojione {
+    height: 1em;
+    width: 1em;
+    margin: 0 .05em 0 .1em;
+    vertical-align: -0.1em;
+}
+
+.photo {
+    width: 50%;
+    height: 100%;
+    float: left;
+    padding-bottom: 32px;
+    display: none;
+}
+
+.photo-first {
+    padding-right: 16px;
+}
+
+.photo-last {
+    padding-left: 16px;
+}
+
+.photo-inner {
+    font-size: 42px;
+    background-color: white;
+    height: 100%;
+    display: block;
+    width: 100%;
+    padding: 32px;
+    position: relative;
+}
+
+.photo-inner img {
+    /*width: 100%;*/
+    /*height: auto;*/
+
+}
+
+.photo-caption {
+    margin-top: 16px;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: visible;
+    line-height: normal;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-align: center;
+}
+
+.retweet-icon {
+    height: 0.9em;
+    width: 0.9em;
+    vertical-align: middle;
+}
+
+.fade-in {
+    opacity:0;
+    -webkit-animation:fadeIn ease-in-out 1;
+    -moz-animation:fadeIn ease-in-out 1;
+    animation:fadeIn ease-in-out 1;
+
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

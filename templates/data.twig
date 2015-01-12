@@ -1,0 +1,58 @@
+<div class="container">
+        {% for slide in slides %}
+        <div id="{{ slide.number }}" class="slide slide-text" data-delay="{{ slide.delay }}" data-type="slide">
+            <div class="slide-content">
+            <h1>{{ slide.title }}</h1>
+            {% autoescape false %}
+            {{slide.text}}
+            {% endautoescape %}
+            </div>
+        </div>
+        {% endfor %}
+        <div id="{{  slides|length }}" class="slide" data-delay="60" data-type="twitter">
+            <div class="translate">
+            {% for tweet in tweets %}
+                {% if tweet.media is not null %}
+                    <div class="tweet tweet-large">
+                        <div class="tweet-profile-image"><img src="{{ tweet.profile_image_url }}"></div>
+                        <div class="tweet-text">
+                            <div class="tweet-media" style="background-image: url('{{ tweet.media }}')"></div>
+                            {% if tweet.is_retweet %}
+                                <span class="tweet-text-bolder">@{{ tweet.original_poster }}:</span> {{ tweet.text | raw }}
+                                <div class="tweet-screen-name"><img class="retweet-icon" src="images/retweet-icon.svg"> @{{ tweet.screen_name }}</div>
+                            {% else %}
+                                {{ tweet.text | raw }}
+                                <div class="tweet-screen-name">@{{ tweet.screen_name }}</div>
+                            {% endif %}
+                            <div class="tweet-created-at" data-livestamp="{{ tweet.created_at }}"></div>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="tweet">
+                        <div class="tweet-profile-image"><img src="{{ tweet.profile_image_url }}"></div>
+                        <div class="tweet-text">
+                            {% if tweet.is_retweet %}
+                                <span class="tweet-text-bolder">@{{ tweet.original_poster }}:</span> {{ tweet.text | raw }}
+                                <div class="tweet-screen-name"><img class="retweet-icon" src="images/retweet-icon.svg"> @{{ tweet.screen_name }}</div>
+                            {% else %}
+                            {{ tweet.original_poster }}{{ tweet.text | raw }}
+                                <div class="tweet-screen-name">@{{ tweet.screen_name }}</div>
+                            {% endif %}
+                            <div class="tweet-created-at" data-livestamp="{{ tweet.created_at }}"></div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+        <div id="{{  slides|length + 1 }}" class="slide" data-delay="30" data-type="instagram">
+            {% for photo in instagramPhotos %}
+                <div id="photo-{{ loop.index }}" class="photo {{ photo.class }}">
+                    <div class="photo-inner">
+                        <img class="fade-in" src="{{ photo.image_url }}">
+                        <div class="photo-caption fade-in">@{{ photo.username }}</div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+</div>

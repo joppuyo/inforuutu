@@ -1,0 +1,21 @@
+{
+  "name": "yukicon/inforuutu",
+  "description": "Event info screen with Twitter and Instagram integration",
+  "minimum-stability": "stable",
+  "license": "GPL-3.0",
+  "authors": [
+    {
+      "name": "Johannes Siipola",
+      "email": "johannes.siipola@gmail.com"
+    },
+    {
+      "name": "Henna Kiiveri",
+      "email": "hennakiiveri@gmail.com"
+    }
+  ],
+  "require": {
+    "corbanb/freebird-php": "v0.2.2",
+    "twig/twig": "v1.16.3",
+    "emojione/emojione": "v1.3.0"
+  }
+}
